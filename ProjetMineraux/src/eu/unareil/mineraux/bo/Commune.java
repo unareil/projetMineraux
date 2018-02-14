@@ -17,8 +17,56 @@ public Commune(Integer id, String nom, Integer codePostal, Pays lePays) {
 	this.setLePays(lePays);
 }
 
+public Commune(String nom, Integer codePostal) {
+	this(null, nom, codePostal, null);
+}
+
+@Override
+public String toString() {
+	StringBuffer bf= new StringBuffer();
+	if (getNom()==null)
+	{
+		return "commune non définie pour le moment";
+	}
+	else
+	{
+	bf.append("Commune [");
+	if (getId()!=null)
+		{
+		bf.append("id=" + getId()+",");
+		}
+	bf.append("nom=" + getNom() + ", code postal=" + getCodePostal());
+	if (getLePays()!=null)
+		{
+		bf.append(",pays =" + getLePays());
+		}
+	if (getLesGites().size()>0)
+		{
+		if (getLesGites().size()==1)
+			{
+			bf.append(",le gite=");
+			}
+		else
+			{
+			bf.append(",les gites=");
+			}
+		for(Gite leGite :getLesGites())
+			{
+			bf.append(leGite);
+			}
+		}
+	bf.append("]");
+	return bf.toString();
+	}
+}
+
 public Commune(String nom, Integer codePostal, Pays lePays) {
 	this(null, nom, codePostal, lePays);
+}
+
+public Commune() {
+	super();
+	// TODO Auto-generated constructor stub
 }
 
 public Integer getId() {
