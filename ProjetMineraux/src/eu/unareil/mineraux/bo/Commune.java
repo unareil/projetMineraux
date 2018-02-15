@@ -1,3 +1,11 @@
+/**
+
+         * Le but de cette classe est de contenir les communes 
+
+         * dans lesquelles sont situées les gites des spécimens 
+
+         */
+
 package eu.unareil.mineraux.bo;
 import java.util.ArrayList;
 
