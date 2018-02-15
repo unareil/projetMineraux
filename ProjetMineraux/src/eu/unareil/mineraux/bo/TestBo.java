@@ -8,6 +8,7 @@ public class TestBo {
 		Gite unGite= new Gite();
 		maCom.ajouteGite(unGite);
 		System.out.println(maCom);
+		System.out.println("fait oups ...");
 
 	}
 
